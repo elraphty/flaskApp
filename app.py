@@ -72,8 +72,9 @@ def register():
 
         flash('You are now registered and can log in', 'success')
 
-        return redirect(url_for('login'))
+        return redirect(url_for('index'))
     return render_template('register.html', form=form)
 
 if __name__ == '__main__':
+    app.secret_key='elraphtySECRET12345690'
     app.run(debug=True)
